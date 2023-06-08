@@ -1,0 +1,229 @@
+h1{
+    position: absolute;
+    top:5%;
+    left: 35%;
+    color: #444444;
+    text-decoration: none;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+footer{
+    position: absolute;
+    top:90%;
+    left: 35%;
+    color: #5C5C5C;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*
+========================
+      Index Table
+========================
+ */
+
+#myTable{
+    color: gray;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px; /* Adjust the value as needed */
+}
+
+/*
+========================
+        Error
+========================
+ */
+
+.error_text{
+    color: red;
+    font-size: medium;
+}
+
+/*
+========================
+      Details Table
+========================
+ */
+
+#my-details-table{
+    color: gray;
+}
+
+#my-details-table, th, td{
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 1000px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px; /* Adjust the value as needed */
+}
+
+/*
+========================
+        Button
+========================
+ */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#myButton {
+    font-size: 1rem;
+    color: #272727;
+    padding: 0.8em 2em;
+    background-color: lightgray;
+    border: 3px solid gray;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: bolder;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+    box-shadow: -5px 5px 0px 0px gray;
+}
+
+#myButton:hover {
+    transform: translate(5px, -5px);
+}
+
+/*
+========================
+        Nav Menu
+========================
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+    position: absolute;
+    top:5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+    color: #fddb3a;
+}
+
+.navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(110px);
+    transform: translateX(110px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(285px);
+    transform: translateX(285px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+/*
+========================
+        About Page
+========================
+ */
+
+.about-us-section {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures rounded corners are applied properly */
+}
+
+.about-div {
+    background-color: dimgrey;
+    padding: 20px;
+}
+
+.about-text {
+    color: black;
+}
+
+.about-h2 {
+    color: black;
+}
+
+.about-h3 {
+    color: black;
+}

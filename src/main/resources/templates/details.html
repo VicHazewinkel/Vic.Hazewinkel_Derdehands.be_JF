@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+    <link rel="stylesheet" th:href="@{stylesheet.css}">
+</head>
+<body>
+<!--
+========================
+        Nav Menu
+========================
+-->
+    <div th:insert="~{navtemplate::navbar}"></div>
+    <h1>details</h1>
+<!--
+========================
+   All Page Contents
+========================
+-->
+
+<!--
+<table id="my-details-table" class="display">
+    <thead>
+        <tr>
+            <th>Name </th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="product : ${products}">
+            <td><span th:text="${product.productname}"/></td>
+            <td><span th:text="${product.category}"/></td>
+            <td><span th:text="${product.description}"/></td>
+            <td><span th:text="${product.contactusername}"/></td>
+            <td><span th:text="${product.email}"/></td>
+            <td><span th:text="${product.price}"/></td>
+        </tr>
+    </tbody>
+</table>
+-->
+
+<!--
+========================
+    Id Page Contents
+========================
+-->
+<div id="detailsContainer" class="detailsContainer-class">
+    <table th:object="${product}">
+        <tr>
+            <td>Name</td>
+            <td th:text="*{productname}"></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td th:text="*{category}"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td th:text="*{description}"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td th:text="*{contactusername}"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td th:text="*{email}"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td th:text="*{price}"></td>
+        </tr>
+    </table>
+</div>
+
+<!--
+========================
+      Footer Menu
+========================
+-->
+    <div th:insert="~{footertemplate::footer}"></div>
+</body>
+</html>

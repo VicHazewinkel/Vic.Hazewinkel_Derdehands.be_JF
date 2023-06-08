@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <nav th:fragment="navbar" class="navMenu">
+        <a th:href="@{~/index}" th:text="#{navbar.index}">Home</a>
+        <a th:href="@{~/new}" th:text="#{navbar.new}">new</a>
+        <a th:href="@{~/about}" th:text="#{navbar.about}"></a>
+        <div class="dot"></div>
+    </nav>
+</html>

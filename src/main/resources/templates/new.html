@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>new</title>
+    <link rel="stylesheet" th:href="@{stylesheet.css}">
+</head>
+<body>
+<!--
+========================
+        Nav Menu
+========================
+-->
+    <div th:insert="~{navtemplate::navbar}"></div>
+    <h1>New: </h1>
+<!--
+========================
+     Form Contents
+========================
+-->
+<form   method="post" th:action="@{~/newProduct}"   th:object="${productToSave}">
+    <table id="myTable">
+        <tr>
+            <td>Product Name</td>
+            <td><input type="text"  th:field="*{productname}" placeholder="Product Name"></td>
+        </tr>
+        <tr>
+            <td>Product Category</td>
+            <td><input type="text" th:field="*{category}" placeholder="Category"></td>
+        </tr>
+        <tr>
+            <td>Product Description</td>
+            <td><input type="text" th:field="*{description}" placeholder="Description"></td>
+        </tr>
+        <tr>
+            <td>Contact Person</td>
+            <td><input type="text" th:field="*{contactusername}" placeholder="Contact"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" th:field="*{email}" placeholder="Email"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="text" th:field="*{price}" placeholder="Price"></td>
+        </tr>
+        <tr>
+            <td>error</td>
+            <td><span th:if="${#fields.hasErrors()}" th:text="${#fields.errors()}" class="error_text"></span></td>
+        </tr>
+    </table>
+<!--
+========================
+       Add Button
+========================
+-->
+
+    <div class="button-container">
+        <button id="myButton"  th:field="submit">A D D</button>
+    </div>
+
+</form>
+
+<!--
+========================
+      Footer Menu
+========================
+-->
+    <div th:insert="~{footertemplate::footer}"></div>
+</body>
+</html>

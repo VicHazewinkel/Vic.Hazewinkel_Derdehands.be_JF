@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" th:href="@{stylesheet.css}">
+</head>
+<body>
+<!--
+========================
+        Nav Menu
+========================
+-->
+    <div th:insert="~{navtemplate::navbar}"></div>
+    <h1>Home: </h1>
+<!--
+========================
+     Table Contents
+========================
+-->
+    <table id="myTable" class="display">
+        <thead>
+        <tr>
+            <th>Name </th>
+            <th>Price</th>
+            <!--
+            <th><button><a th:href="@{~/details}">D E T A I L S</a></button></th>
+            -->
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td><span th:text="${product.productname}"/></td>
+                <td><span th:text="${product.price}"/></td>
+
+                <td>
+                     <button><a class="btn" th:href="@{/details/{id}(id = ${product.id})}">Details</a></button>
+                </td>
+
+
+            </tr>
+        </tbody>
+    </table>
+<!--
+========================
+       New Button
+========================
+-->
+<div class="button-container">
+    <button id="myButton">
+        <a th:href="@{~/new}" th:text="#{navbar.new}">N E W</a>
+    </button>
+</div>
+
+<!--
+========================
+      Footer Menu
+========================
+-->
+    <div th:insert="~{footertemplate::footer}"></div>
+</body>
+</html>
